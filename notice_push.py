@@ -1,4 +1,5 @@
 import requests
+import os
 from get_price import get_min
 from datetime import datetime, timedelta, timezone
 
@@ -14,6 +15,8 @@ def push_telegram(msg):
 
 if __name__ == '__main__':
     response = get_min()
+    if 'telegram_bot' in os.environ:
+        notice_telegram_url = str(os.getenv('telegram_bot'))
     tz_utc_8 = timezone(timedelta(hours=8))
     now = datetime.now(tz_utc_8)
     msg += str(now.strftime('%Y-%m-%d %H:%M:%S')) + '\n'
