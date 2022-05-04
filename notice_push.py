@@ -4,7 +4,7 @@ from get_price import get_min
 from datetime import datetime, timedelta, timezone
 
 notice_telegram_url = "telegram_bot_address"
-min_limit = 0.005
+min_limit = 0.01
 msg = '[OCCE] '
 
 
