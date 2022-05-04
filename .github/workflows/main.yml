@@ -6,7 +6,6 @@ on:
       - master
   schedule:
     - cron: '*/30 *  * * *' 
-	
 jobs:
   GetPrice:
     runs-on: ubuntu-latest
