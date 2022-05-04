@@ -1,14 +1,14 @@
-name: 'notice_sugar'
+name: 'sugar_notice'
 
 on:
   push:
     branches: 
-      - master
+      - main
   schedule:
     - cron: '*/30 *  * * *' 
   workflow_dispatch:
 jobs:
-  GetPrice:
+  GetPrice_and_Push:
     runs-on: ubuntu-latest
     steps:
     - name: 'Checkout codes'
